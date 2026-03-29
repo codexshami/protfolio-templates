@@ -16,31 +16,39 @@ A curated collection of modern, high-quality, responsive 3D portfolio website te
 ### 1. Futuristic Dark Theme (Neon & Glassmorphism)
 A tech-heavy, neon-glowing aesthetic complete with a Three.js interactive particle background, frosted glass cards, and smooth scroll animations. Perfect for frontend and creative developers.
 
-![Futuristic Preview](https://via.placeholder.com/1200x600/050510/00f0ff.png?text=Portfolio+1:+Futuristic+Dark+Theme)
+![Futuristic Preview](img/neon3d.png)
 - **Directory**: `/portfolio_1_futuristic`
+
+---
 
 ### 2. Minimal Clean White Theme
 A high-end fashion/design portfolio with lots of whitespace, crisp typography, custom cursor logic, and subtle parallax scrolling imagery.
 
-![Minimal Preview](https://via.placeholder.com/1200x600/fafafa/111111.png?text=Portfolio+2:+Minimal+Clean+Theme)
+![Minimal Preview](img/minimal.png)
 - **Directory**: `/portfolio_2_minimal`
+
+---
 
 ### 3. Cyberpunk 3D Theme
 Raw, angular, and rebellious. Features a retro 3D wireframe terrain, glitch text effects, and bold neon yellow/black contrasts.
 
-![Cyberpunk Preview](https://via.placeholder.com/1200x600/050505/fcee0a.png?text=Portfolio+3:+Cyberpunk+3D)
+![Cyberpunk Preview](img/cyber.png)
 - **Directory**: `/portfolio_3_cyberpunk`
+
+---
 
 ### 4. Luxury Black & Gold Theme
 Sophistication meets the web. Elegant serif typography, floating gold-bordered cards with 3D tilt effects, and smooth entry animations for exclusive agencies.
 
-![Luxury Preview](https://via.placeholder.com/1200x600/050505/d4af37.png?text=Portfolio+4:+Luxury+Black+&+Gold)
+![Luxury Preview](img/royal.png)
 - **Directory**: `/portfolio_4_luxury`
+
+---
 
 ### 5. Developer Terminal Theme
 A classic hacker/DevOps terminal with interactive command inputs and an immersive Matrix digital rain canvas background.
 
-![Terminal Preview](https://via.placeholder.com/1200x600/0d0d0d/00ff00.png?text=Portfolio+5:+Developer+Terminal)
+![Terminal Preview](img/sysrdmin.png)
 - **Directory**: `/portfolio_5_terminal`
 
 ##  Folder Structure

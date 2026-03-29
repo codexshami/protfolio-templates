@@ -1,0 +1,122 @@
+:root {
+    --black: #050505;
+    --dark-grey: #111111;
+    --gold: #D4AF37;
+    --gold-light: #F3E5AB;
+    --gold-dark: #AA8C2C;
+    --white: #F8F8F8;
+    --serif: 'Cormorant Garamond', serif;
+    --sans: 'Montserrat', sans-serif;
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--white); font-family: var(--sans); overflow-x: hidden; }
+
+/* Framing Lines */
+.gold-line { position: fixed; background: var(--gold-dark); z-index: 999; pointer-events: none; opacity: 0.5; }
+.gold-line.top { top: 20px; left: 20px; right: 20px; height: 1px; }
+.gold-line.bottom { bottom: 20px; left: 20px; right: 20px; height: 1px; }
+.gold-line.left { top: 20px; left: 20px; bottom: 20px; width: 1px; }
+.gold-line.right { top: 20px; right: 20px; bottom: 20px; width: 1px; }
+
+/* Utilities */
+.min-vh-100 { min-height: 100vh; }
+.flex-center { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.text-center { text-align: center; }
+.section-padding { padding: 120px 0; }
+.container { max-width: 1400px; margin: 0 auto; padding: 0 40px; width: 100%; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* Typography */
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 300; }
+.subtitle { font-family: var(--sans); font-size: 0.8rem; letter-spacing: 5px; color: var(--gold); margin-bottom: 20px; text-transform: uppercase; }
+.title { font-size: 8rem; line-height: 1; margin-bottom: 30px; background: linear-gradient(45deg, var(--gold-light), var(--gold), var(--gold-dark)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.description { font-size: 1.2rem; max-width: 600px; margin: 0 auto 50px; color: #aaa; line-height: 1.8; }
+.section-title { font-size: 3.5rem; margin-bottom: 60px; color: var(--gold-light); }
+.lux-text { font-family: var(--serif); font-size: 1.8rem; line-height: 1.6; color: #ccc; margin-bottom: 40px; max-width: 800px; }
+
+/* Buttons */
+.gold-btn {
+    display: inline-block; padding: 15px 40px; font-family: var(--sans); font-size: 0.9rem;
+    text-transform: uppercase; letter-spacing: 2px; color: var(--gold); text-decoration: none;
+    border: 1px solid var(--gold); position: relative; overflow: hidden; transition: var(--transition);
+    background: transparent; cursor: pointer;
+}
+.gold-btn::before {
+    content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+    transition: var(--transition);
+}
+.gold-btn:hover { background: var(--gold); color: var(--black); }
+.gold-btn:hover::before { left: 100%; }
+
+/* Navigation */
+.luxury-nav {
+    position: fixed; top: 40px; width: 100%; padding: 0 60px; display: flex;
+    justify-content: space-between; align-items: center; z-index: 1000;
+}
+.logo { font-family: var(--serif); font-size: 2.5rem; color: var(--gold-light); font-weight: 600;}
+.nav-links { display: flex; list-style: none; gap: 40px; }
+.nav-links a {
+    color: var(--white); text-decoration: none; font-size: 0.9rem;
+    text-transform: uppercase; letter-spacing: 2px; transition: var(--transition);
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* Scroll Down */
+.scroll-down {
+    position: absolute; bottom: 50px; font-size: 0.7rem; letter-spacing: 3px;
+    color: var(--gold); text-align: center; animation: bob 2s infinite ease-in-out;
+}
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+
+/* Collection Grid */
+.collection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.collection-card { position: relative; cursor: pointer; transform-style: preserve-3d; }
+.card-image {
+    width: 100%; height: 600px; background-size: cover; background-position: center;
+    border: 1px solid rgba(212, 175, 55, 0.2); transition: var(--transition);
+}
+.collection-card::after {
+    content: ''; position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px;
+    border: 1px solid var(--gold-dark); opacity: 0; transition: var(--transition); pointer-events: none;
+}
+.collection-card:hover::after { opacity: 1; transform: translateZ(30px); }
+.card-content { display: flex; flex-direction: column; align-items: center; padding-top: 30px; transform: translateZ(40px); }
+.card-content h3 { font-size: 1.8rem; color: var(--gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;}
+.card-content p { font-size: 0.9rem; color: #888; letter-spacing: 1px; text-transform: uppercase; }
+
+/* Atelier */
+.atelier-flex { display: flex; align-items: center; justify-content: space-between; gap: 80px; }
+.atelier-text { flex: 1; }
+.expertise-list { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
+.expertise-item { display: flex; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.expertise-item h4 { font-size: 1.8rem; letter-spacing: 1px; }
+.expertise-item span { color: var(--gold); font-family: var(--serif); font-size: 1.2rem; }
+.atelier-image { flex: 1; position: relative; width: 100%; height: 700px; transform-style: preserve-3d; }
+.image-inner { position: absolute; inset: 20px; background-size: cover; background-position: center; z-index: 2; transform: translateZ(20px); filter: grayscale(100%) contrast(1.2); transition: 0.5s; }
+.atelier-image:hover .image-inner { filter: grayscale(0%); }
+.gold-frame { position: absolute; inset: 0; border: 2px solid var(--gold); z-index: 1; transform: translateZ(10px); }
+
+/* Form */
+.lux-form { display: flex; flex-direction: column; gap: 30px; width: 100%; max-width: 600px; }
+.lux-input {
+    background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 15px 0; color: var(--white); font-family: var(--sans); font-size: 1rem; transition: var(--transition);
+}
+.lux-input:focus { outline: none; border-bottom-color: var(--gold); }
+.btn-submit { margin-top: 20px; }
+
+footer p { font-size: 0.8rem; letter-spacing: 3px; color: #555; padding: 40px 0; }
+
+@media (max-width: 900px) {
+    .collection-grid { grid-template-columns: 1fr; }
+    .atelier-flex { flex-direction: column; }
+    .title { font-size: 5rem; }
+    .gold-line { display: none; }
+    .luxury-nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .collection-card::after { display: none; }
+}

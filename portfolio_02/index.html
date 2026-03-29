@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of a Data Science Student, AI Developer and Problem Solver – showcasing projects, skills, and experience." />
+  <title>Rumman Jalali | Data Science & AI Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- ───────────── NAVBAR ───────────── -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-logo">
+      <span class="logo-text">Rumman Jalali</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+        <i class="fas fa-sun" id="theme-icon"></i>
+      </button>
+      <button id="hamburger" class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ───────────── HERO ───────────── -->
+  <section id="hero" class="section hero-section">
+    <canvas id="hero-canvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name reveal-up">
+        <span class="name-line">Hi, I'm</span>
+        <span class="name-gradient">Rumman Jalali</span>
+      </h1>
+      <p class="hero-subtitle reveal-up">
+        <span class="typing-static">I am a&nbsp;</span>
+        <span id="typing-text" class="typing-target"></span>
+        <span class="typing-cursor">|</span>
+      </p>
+      <div class="hero-btns reveal-up">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
+      </div>
+      <div class="hero-stats reveal-up">
+        <div class="stat-item">
+          <span class="stat-num" data-target="4">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="10">0</span>
+          <span class="stat-label">Skills</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ───────────── ABOUT ───────────── -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Avatar card -->
+        <div class="about-card glass-card reveal-left">
+          <div class="about-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">
+              <i class="fas fa-user-astronaut avatar-icon"></i>
+            </div>
+            <div class="avatar-glow"></div>
+          </div>
+          <div class="about-tags">
+            <span class="tag"><i class="fas fa-graduation-cap"></i> B.Tech Data Science</span>
+            <span class="tag"><i class="fas fa-brain"></i> AI Enthusiast</span>
+            <span class="tag"><i class="fas fa-map-marker-alt"></i> Uttar Pradesh, India</span>
+          </div>
+        </div>
+
+        <!-- Bio + skills -->
+        <div class="about-content reveal-right">
+          <p class="about-bio">
+            I'm a passionate <strong>Data Science student</strong> with a deep love for building
+            intelligent systems and transforming raw data into meaningful insights. I specialize in
+            Python, Machine Learning, and AI — creating solutions that bridge the gap between
+            technology and real-world impact.
+          </p>
+
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-label"><span>Python</span><span>90%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-label"><span>Machine Learning</span><span>82%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-label"><span>SQL</span><span>85%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-label"><span>Power BI</span><span>78%</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── PROJECTS ───────────── -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- CardioVision AI -->
+        <div class="project-card glass-card reveal-up" data-delay="0">
+          <div class="project-card-glow"></div>
+          <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+          <div class="project-content">
+            <h3 class="project-title">CardioVision AI</h3>
+            <p class="project-desc">Disease Prediction App using ML models trained on cardiac datasets, providing real-time risk assessment with explainable AI.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Streamlit</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="proj-link proj-demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+          <div class="project-card-shine"></div>
+        </div>
+
+        <!-- AI Chatbot -->
+        <div class="project-card glass-card reveal-up" data-delay="100">
+          <div class="project-card-glow"></div>
+          <div class="project-icon"><i class="fas fa-robot"></i></div>
+          <div class="project-content">
+            <h3 class="project-title">AI Chatbot</h3>
+            <p class="project-desc">NLP-based conversational AI that understands context and provides intelligent responses across multiple domains.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">TensorFlow</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="proj-link proj-demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+          <div class="project-card-shine"></div>
+        </div>
+
+        <!-- Sales Dashboard -->
+        <div class="project-card glass-card reveal-up" data-delay="200">
+          <div class="project-card-glow"></div>
+          <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="project-content">
+            <h3 class="project-title">Sales Dashboard</h3>
+            <p class="project-desc">Interactive Power BI dashboard with advanced DAX measures and drill-through reports for business intelligence analytics.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">DAX</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="proj-link proj-demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+          <div class="project-card-shine"></div>
+        </div>
+
+        <!-- Sketch Classifier -->
+        <div class="project-card glass-card reveal-up" data-delay="300">
+          <div class="project-card-glow"></div>
+          <div class="project-icon"><i class="fas fa-pencil-ruler"></i></div>
+          <div class="project-content">
+            <h3 class="project-title">Sketch Classifier AI</h3>
+            <p class="project-desc">CNN-powered sketch recognition system that classifies hand-drawn images in real-time with high accuracy.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">CNN</span>
+              <span class="tech-tag">OpenCV</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="proj-link proj-demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+          <div class="project-card-shine"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── EXPERIENCE ───────────── -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-marker">
+            <div class="marker-dot"><i class="fas fa-graduation-cap"></i></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-date">Pursuing</div>
+            <h3 class="timeline-title">B.Tech in Data Science / Engineering</h3>
+            <p class="timeline-sub">Teerthanker Mahaveer University</p>
+            <p class="timeline-desc">Pursuing Bachelor's Degree in Data Science, covering Machine Learning, AI, Statistics, Data Engineering, and Computer Fundamentals.</p>
+            <div class="timeline-tags">
+              <span class="tag">Data Science</span>
+              <span class="tag">Fresher</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-marker">
+            <div class="marker-dot"><i class="fas fa-certificate"></i></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-date">Aug 2025 – Sep 2025</div>
+            <h3 class="timeline-title">Data Science Intern (Online · 6 Weeks)</h3>
+            <p class="timeline-sub">CODTECH IT Solutions Private Limited</p>
+            <p class="timeline-desc">Worked on real-world data science tasks including data cleaning, EDA, feature engineering, and model training & evaluation. Gained hands-on experience with Python, Pandas, Scikit-learn, and Matplotlib.</p>
+            <div class="timeline-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">EDA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-marker">
+            <div class="marker-dot"><i class="fas fa-school"></i></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-date">Class 12 – ISC</div>
+            <h3 class="timeline-title">Higher Secondary Education</h3>
+            <p class="timeline-sub">Maharaja Agrasen Public School</p>
+            <p class="timeline-desc">Completed Class 12 under the ISC board, building a strong foundation in science and mathematics that laid the groundwork for a career in Data Science.</p>
+            <div class="timeline-tags">
+              <span class="tag">ISC Board</span>
+              <span class="tag">Science Stream</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── SKILLS ───────────── -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Expertise</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+      </div>
+
+      <div class="skills-wrapper">
+
+        <div class="skills-category reveal-up" data-delay="0">
+          <h3 class="skills-cat-title"><i class="fas fa-code"></i> Programming</h3>
+          <div class="skills-grid">
+            <div class="skill-chip"><i class="fab fa-python"></i><span>Python</span></div>
+            <div class="skill-chip"><i class="fas fa-database"></i><span>SQL</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal-up" data-delay="100">
+          <h3 class="skills-cat-title"><i class="fas fa-tools"></i> Tools & Platforms</h3>
+          <div class="skills-grid">
+            <div class="skill-chip"><i class="fab fa-git-alt"></i><span>Git &amp; GitHub</span></div>
+            <div class="skill-chip"><i class="fas fa-book"></i><span>Jupyter Notebook</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal-up" data-delay="200">
+          <h3 class="skills-cat-title"><i class="fas fa-brain"></i> Data Science / ML</h3>
+          <div class="skills-grid">
+            <div class="skill-chip"><i class="fas fa-broom"></i><span>Data Cleaning</span></div>
+            <div class="skill-chip"><i class="fas fa-search"></i><span>EDA</span></div>
+            <div class="skill-chip"><i class="fas fa-cogs"></i><span>Feature Engineering</span></div>
+            <div class="skill-chip"><i class="fas fa-robot"></i><span>Scikit-learn</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal-up" data-delay="300">
+          <h3 class="skills-cat-title"><i class="fas fa-layer-group"></i> Libraries</h3>
+          <div class="skills-grid">
+            <div class="skill-chip"><i class="fas fa-calculator"></i><span>NumPy</span></div>
+            <div class="skill-chip"><i class="fas fa-table"></i><span>Pandas</span></div>
+            <div class="skill-chip"><i class="fas fa-chart-line"></i><span>Matplotlib</span></div>
+            <div class="skill-chip"><i class="fas fa-chart-area"></i><span>Seaborn</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal-up" data-delay="400">
+          <h3 class="skills-cat-title"><i class="fas fa-star"></i> Soft Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-chip"><i class="fas fa-comments"></i><span>Communication</span></div>
+            <div class="skill-chip"><i class="fas fa-bolt"></i><span>Quick Learner</span></div>
+            <div class="skill-chip"><i class="fas fa-users"></i><span>Teamwork</span></div>
+            <div class="skill-chip"><i class="fas fa-clock"></i><span>Time Management</span></div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal-up" data-delay="500">
+          <h3 class="skills-cat-title"><i class="fas fa-language"></i> Languages</h3>
+          <div class="skills-grid">
+            <div class="skill-chip"><i class="fas fa-globe"></i><span>English</span></div>
+            <div class="skill-chip"><i class="fas fa-globe"></i><span>Hindi</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Floating 3D canvas for skills decoration -->
+      <div class="skills-3d-canvas">
+        <canvas id="skills-canvas"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── CONTACT ───────────── -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info reveal-left">
+          <h3>Let's build something amazing together</h3>
+          <p>Whether you have a project in mind, a collaboration idea, or just want to say hello — my inbox is always open.</p>
+          <div class="contact-items">
+            <a href="mailto:rummanmohd123@gmail.com" class="contact-item glass-card">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="ci-label">Email</div>
+                <div class="ci-value">rummanmohd123@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/rumman-jalali" target="_blank" class="contact-item glass-card">
+              <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <div class="ci-label">LinkedIn</div>
+                <div class="ci-value">linkedin.com/in/rumman-jalali</div>
+              </div>
+            </a>
+            <a href="https://github.com" target="_blank" class="contact-item glass-card">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <div class="ci-label">Location</div>
+                <div class="ci-value">Uttar Pradesh, India</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card reveal-right" id="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+              <div class="input-glow"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <div class="input-wrapper">
+              <i class="fas fa-envelope input-icon"></i>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              <div class="input-glow"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <div class="input-wrapper">
+              <i class="fas fa-tag input-icon"></i>
+              <input type="text" id="subject" name="subject" placeholder="Project Collaboration" />
+              <div class="input-glow"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <div class="input-wrapper">
+              <i class="fas fa-comment input-icon"></i>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <div class="input-glow"></div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary full-width" id="send-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+            <span class="btn-ripple"></span>
+          </button>
+          <div id="form-status" class="form-status"></div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── FOOTER ───────────── -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">&lt;Rumman/&gt;</div>
+      <p class="footer-copy">© 2025 Rumman Jalali. Crafted with <span class="heart">♥</span> and lots of code.</p>
+      <div class="footer-social">
+        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/rumman-jalali" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:rummanmohd123@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

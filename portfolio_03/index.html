@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MOHD SAMI – Data Scientist Portfolio. Transforming Data into Intelligent Insights." />
+  <meta name="keywords" content="MOHD SAMI, Data Scientist, Python, Machine Learning, Portfolio, TMU" />
+  <meta name="author" content="MOHD SAMI" />
+  <meta property="og:title" content="MOHD SAMI | Data Scientist" />
+  <meta property="og:description" content="Transforming Data into Intelligent Insights" />
+  <meta property="og:type" content="website" />
+  <title>MOHD SAMI | Data Scientist</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">MS<span class="dot">.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-greeting reveal-text">Hello, I'm</p>
+      <h1 class="hero-name reveal-text">MOHD <span class="accent">SAMI</span></h1>
+      <h2 class="hero-title reveal-text">Data Scientist</h2>
+      <p class="hero-tagline reveal-text">"Transforming Data into Intelligent Insights"</p>
+      <div class="hero-cta reveal-text">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <div class="hero-scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <p class="about-description">
+            Enthusiastic Data Science fresher with a strong foundation in
+            <span class="highlight">Python</span>, data analysis, and 
+            <span class="highlight">machine learning</span>. Passionate about 
+            solving real-world problems using data-driven approaches.
+          </p>
+          <p class="about-sub">
+            Currently pursuing B.Tech in Data Science at Teerthanker Mahaveer University, 
+            I thrive at the intersection of technology and analytics, turning complex datasets 
+            into actionable intelligence.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-label">Internships</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual fade-in">
+          <div class="sphere-container">
+            <canvas id="sphere-canvas"></canvas>
+            <div class="sphere-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Expertise</span>
+        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card tilt-card fade-in" data-skill="Python">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656L6.207 5.4h5.814v.8H3.889S0 5.77 0 11.933c0 6.163 3.404 5.944 3.404 5.944h2.032v-2.859s-.109-3.404 3.348-3.404h5.77s3.239.052 3.239-3.13V3.129S18.28 0 11.914 0zm-3.21 1.807a1.047 1.047 0 110 2.095 1.047 1.047 0 010-2.095z" fill="#722F37"/><path d="M12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.744H12v-.8h8.132S24 18.23 24 12.067c0-6.163-3.404-5.944-3.404-5.944h-2.032v2.859s.109 3.404-3.348 3.404H9.446s-3.239-.052-3.239 3.13v5.355S5.72 24 12.086 24zm3.21-1.807a1.047 1.047 0 110-2.095 1.047 1.047 0 010 2.095z" fill="#722F37" opacity="0.6"/></svg>
+          </div>
+          <h3 class="skill-name">Python</h3>
+          <p class="skill-desc">Data analysis, scripting &amp; automation</p>
+          <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+        </div>
+
+        <div class="skill-card tilt-card fade-in" data-skill="SQL">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="10" ry="3.5" fill="#722F37" opacity="0.8"/><path d="M2 5v4.5c0 1.93 4.477 3.5 10 3.5s10-1.57 10-3.5V5" stroke="#722F37" stroke-width="1.5" fill="none"/><path d="M2 9.5v4.5c0 1.93 4.477 3.5 10 3.5s10-1.57 10-3.5V9.5" stroke="#722F37" stroke-width="1.5" fill="none"/><path d="M2 14v4.5C2 20.43 6.477 22 12 22s10-1.57 10-3.5V14" stroke="#722F37" stroke-width="1.5" fill="none"/></svg>
+          </div>
+          <h3 class="skill-name">SQL</h3>
+          <p class="skill-desc">Database queries &amp; management</p>
+          <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+        </div>
+
+        <div class="skill-card tilt-card fade-in" data-skill="ML">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3" fill="#722F37"/><circle cx="4" cy="6" r="2" fill="#722F37" opacity="0.7"/><circle cx="20" cy="6" r="2" fill="#722F37" opacity="0.7"/><circle cx="4" cy="18" r="2" fill="#722F37" opacity="0.7"/><circle cx="20" cy="18" r="2" fill="#722F37" opacity="0.7"/><line x1="6" y1="7" x2="10" y2="11" stroke="#722F37" stroke-width="1.5"/><line x1="18" y1="7" x2="14" y2="11" stroke="#722F37" stroke-width="1.5"/><line x1="6" y1="17" x2="10" y2="13" stroke="#722F37" stroke-width="1.5"/><line x1="18" y1="17" x2="14" y2="13" stroke="#722F37" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="skill-name">Machine Learning</h3>
+          <p class="skill-desc">Supervised &amp; unsupervised models</p>
+          <div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div>
+        </div>
+
+        <div class="skill-card tilt-card fade-in" data-skill="HTML">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 3l1.5 16.5L12 21l6.5-1.5L20 3H4z" stroke="#722F37" stroke-width="1.5" fill="none"/><path d="M8 8h8M8.5 12h7l-.5 4-3 1-3-1-.2-2" stroke="#722F37" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="skill-name">HTML</h3>
+          <p class="skill-desc">Semantic structure &amp; web markup</p>
+          <div class="skill-bar"><div class="skill-fill" data-pct="82"></div></div>
+        </div>
+
+        <div class="skill-card tilt-card fade-in" data-skill="CSS">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 3l1.5 16.5L12 21l6.5-1.5L20 3H4z" stroke="#722F37" stroke-width="1.5" fill="none"/><path d="M8 8h8M7.5 12h8.5l-.7 5-3.3 1-3.3-1-.3-2.5" stroke="#722F37" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="skill-name">CSS</h3>
+          <p class="skill-desc">Styling, layouts &amp; animations</p>
+          <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+        </div>
+
+        <div class="skill-card tilt-card fade-in" data-skill="PS">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3L3 9.5l4 4L3 17.5 6.5 21l4-4 4 4L21 14.5l-4-4 4-4L17.5 3l-4 4-4-4z" stroke="#722F37" stroke-width="1.5" fill="none" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="skill-name">Problem Solving</h3>
+          <p class="skill-desc">Analytical &amp; logical thinking</p>
+          <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section education-section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic Journey</span>
+        <h2 class="section-title">My <span class="accent">Education</span></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2023 – 2027</span>
+              <span class="timeline-badge">Current</span>
+            </div>
+            <h3 class="timeline-degree">B.Tech in Data Science</h3>
+            <p class="timeline-school">Teerthanker Mahaveer University</p>
+            <p class="timeline-detail">Pursuing a comprehensive program covering data analysis, machine learning, AI, and software engineering fundamentals.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2023</span>
+            </div>
+            <h3 class="timeline-degree">Intermediate (12th Grade)</h3>
+            <p class="timeline-school">Mission Public School</p>
+            <p class="timeline-detail">Completed higher secondary education with a focus on science and mathematics.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="timeline-meta">
+              <span class="timeline-year">2021</span>
+            </div>
+            <h3 class="timeline-degree">High School (10th Grade)</h3>
+            <p class="timeline-school">Mission Public School</p>
+            <p class="timeline-detail">Completed secondary education with strong performance in core subjects.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Work History</span>
+        <h2 class="section-title">My <span class="accent">Experience</span></h2>
+      </div>
+      <div class="experience-grid">
+
+        <div class="exp-card glass-card tilt-card fade-in">
+          <div class="exp-header">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3" fill="#722F37"/><path d="M2 12h3M19 12h3M12 2v3M12 19v3" stroke="#722F37" stroke-width="2" stroke-linecap="round"/><path d="M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke="#722F37" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+            </div>
+            <div class="exp-period">
+              <span class="period-badge">08/2025 – 10/2025</span>
+            </div>
+          </div>
+          <h3 class="exp-title">Data Science Intern</h3>
+          <div class="exp-points">
+            <div class="exp-point">
+              <span class="point-dot"></span>
+              <span>Improved ML model accuracy by optimizing feature engineering pipelines</span>
+            </div>
+            <div class="exp-point">
+              <span class="point-dot"></span>
+              <span>Generated actionable business insights from large-scale datasets</span>
+            </div>
+            <div class="exp-point">
+              <span class="point-dot"></span>
+              <span>Automated data preprocessing workflows, reducing processing time by 40%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-card glass-card tilt-card fade-in">
+          <div class="exp-header">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#722F37" stroke-width="1.5" fill="none"/><path d="M8 12l3 3 5-5" stroke="#722F37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="exp-period">
+              <span class="period-badge">06/2025 – 07/2025</span>
+            </div>
+          </div>
+          <h3 class="exp-title">Python Programming Intern</h3>
+          <div class="exp-points">
+            <div class="exp-point">
+              <span class="point-dot"></span>
+              <span>Built and maintained Python scripts for data collection &amp; transformation</span>
+            </div>
+            <div class="exp-point">
+              <span class="point-dot"></span>
+              <span>Implemented efficient algorithms improving solution performance by 30%</span>
+            </div>
+            <div class="exp-point">
+              <span class="point-dot"></span>
+              <span>Collaborated with senior engineers on real-world automation tasks</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card tilt-card fade-in">
+          <div class="project-glow"></div>
+          <div class="project-top">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#722F37" opacity="0.8"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Heart Disease Prediction</h3>
+          <p class="project-subtitle">Cardio Vision AI</p>
+          <p class="project-desc">AI-powered system to predict heart disease risk using patient health metrics. Achieves high accuracy through optimized ML pipelines.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Scikit-learn</span>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card fade-in">
+          <div class="project-glow"></div>
+          <div class="project-top">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="7" width="22" height="12" rx="3" stroke="#722F37" stroke-width="1.5" fill="none"/><circle cx="7" cy="19" r="2" fill="#722F37" opacity="0.7"/><circle cx="17" cy="19" r="2" fill="#722F37" opacity="0.7"/><path d="M5 11h6M5 14h4" stroke="#722F37" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Car Rental System</h3>
+          <p class="project-subtitle">Full-Stack Desktop App</p>
+          <p class="project-desc">A robust car rental management system with a graphical interface, database integration, and complete booking lifecycle management.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Swing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section certifications-section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Achievements</span>
+        <h2 class="section-title">Certifications &amp; <span class="accent">Awards</span></h2>
+      </div>
+      <div class="cert-grid">
+
+        <div class="cert-card glass-card tilt-card fade-in">
+          <div class="cert-glow"></div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4" fill="#722F37" opacity="0.8"/><path d="M8 8l-4 8 4-1 2 2 2-8M16 8l4 8-4-1-2 2-2-8" stroke="#722F37" stroke-width="1.2" fill="none" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="cert-grade">A+</div>
+          <h3 class="cert-title">ISRO START Program</h3>
+          <p class="cert-body">Successfully completed the Indian Space Research Organisation training program with the highest distinction grade.</p>
+          <div class="cert-issuer">
+            <span>ISRO, India</span>
+          </div>
+        </div>
+
+        <div class="cert-card glass-card tilt-card fade-in">
+          <div class="cert-glow"></div>
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5z" fill="#722F37" opacity="0.8"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#722F37" stroke-width="1.5" fill="none" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="cert-grade">
+            <svg viewBox="0 0 24 24" fill="#722F37" width="28" height="28"><path d="M12 1L9 9H1l7 5-3 8 7-5 7 5-3-8 7-5h-8L12 1z"/></svg>
+          </div>
+          <h3 class="cert-title">Prime Minister Appreciation Certificate</h3>
+          <p class="cert-body">Received the prestigious Prime Minister's certificate of appreciation for outstanding contributions and achievements.</p>
+          <div class="cert-issuer">
+            <span>Government of India</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-info fade-in">
+          <p class="contact-intro">I'm open to internships, collaborations, and opportunities. Feel free to reach out!</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#722F37"/></svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Bareilly, Uttar Pradesh</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#722F37"/></svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Email</span>
+                <a href="mailto:sami.052168@tmu.ac.in" class="contact-value">sami.052168@tmu.ac.in</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#722F37"/></svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Phone</span>
+                <a href="tel:+919389791967" class="contact-value">+91 9389791967</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card fade-in" id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+            <span id="btn-text">Send Message</span>
+            <svg id="btn-icon" viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        Crafted with <span class="accent">♥</span> by <strong>MOHD SAMI</strong> &nbsp;|&nbsp; 
+        <span>&copy; 2025 All Rights Reserved</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

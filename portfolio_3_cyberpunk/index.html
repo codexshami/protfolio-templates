@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk | Netrunner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="grid-canvas"></div> <!-- Three.js Background -->
+    <div class="scanlines"></div>
+
+    <header class="cyber-header">
+        <div class="logo glitch-hover" data-text="SYS.ADMIN">SYS.ADMIN</div>
+        <nav class="cyber-nav">
+            <a href="#stats">[ STATS ]</a>
+            <a href="#missions">[ MISSIONS ]</a>
+            <a href="#comm">[ COMM_LINK ]</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero cyber-section">
+            <div class="hero-box cyber-box">
+                <p class="sys-msg">> SYSTEM PROTOCOL INITIALIZED...</p>
+                <h1 class="glitch" data-text="NETRUNNER">NETRUNNER</h1>
+                <h2 class="cyber-role">W3B // ARCHITECT</h2>
+                <button class="cyber-btn" data-text="ACCESS_MAINFRAME">ACCESS_MAINFRAME</button>
+            </div>
+        </section>
+
+        <section id="stats" class="stats cyber-section">
+            <h2 class="section-header">DATABASE // SKILLS</h2>
+            <div class="stats-grid">
+                <div class="stat-card cyber-box">
+                    <h3>CYBER_DECK</h3>
+                    <div class="progress-bar"><div class="fill" style="width:95%"></div></div>
+                    <p class="stat-desc">React / Vue / Svelte</p>
+                </div>
+                <div class="stat-card cyber-box">
+                    <h3>NEURAL_NET</h3>
+                    <div class="progress-bar"><div class="fill" style="width:80%"></div></div>
+                    <p class="stat-desc">Node.js / Python</p>
+                </div>
+                <div class="stat-card cyber-box">
+                    <h3>OPTICS</h3>
+                    <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
+                    <p class="stat-desc">Three.js / WebGL</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="missions" class="missions cyber-section">
+            <h2 class="section-header">ARCHIVE // PROJECTS</h2>
+            <div class="missions-list">
+                <article class="mission-card cyber-box">
+                    <div class="mission-img">
+                        <img src="https://via.placeholder.com/800x400/000000/fcee0a?text=PROJECT_01" alt="Project 1">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="mission-info">
+                        <h3>CORPO_STEALTH</h3>
+                        <p>Infiltrated secure networks using advanced React architectures.</p>
+                        <a href="#" class="cyber-link">> EXECUTE</a>
+                    </div>
+                </article>
+                <article class="mission-card cyber-box">
+                    <div class="mission-img">
+                        <img src="https://via.placeholder.com/800x400/000000/00ff00?text=PROJECT_02" alt="Project 2">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="mission-info">
+                        <h3>NIGHT_CITY_MAP</h3>
+                        <p>Interactive 3D visualization using Three.js and custom shaders.</p>
+                        <a href="#" class="cyber-link">> EXECUTE</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="comm" class="comm cyber-section">
+            <h2 class="section-header">COMM_LINK // SECURE</h2>
+            <form class="cyber-form cyber-box">
+                <div class="form-group">
+                    <label>ID_TAG // NAME</label>
+                    <input type="text" placeholder="ENTER ID...">
+                </div>
+                <div class="form-group">
+                    <label>SECURE_CHANNEL // EMAIL</label>
+                    <input type="email" placeholder="ENTER COMM ROUTE...">
+                </div>
+                <div class="form-group">
+                    <label>PAYLOAD // MESSAGE</label>
+                    <textarea placeholder="ENTER TRANSMISSION..." rows="4"></textarea>
+                </div>
+                <button type="submit" class="cyber-btn" data-text="TRANSMIT_DATA">TRANSMIT_DATA</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

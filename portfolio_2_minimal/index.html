@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Design | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav>
+        <div class="logo">ALEXA.</div>
+        <div class="menu-btn">Menu</div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="reveal-text">Designing</h1>
+                <h1 class="reveal-text italic">Simplicity.</h1>
+                <p class="fade-in">Digital Designer & Art Director based in New York.</p>
+            </div>
+            <div class="scroll-indicator fade-in">Scroll Down</div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-flex">
+                    <div class="about-text">
+                        <h2 class="reveal-title">Curating visual stories through minimalist design.</h2>
+                        <p>With over a decade of experience in digital product design, I focus on creating intuitive, elegant, and timeless experiences that elevate brands and connect with users on a deeper level.</p>
+                        <a href="#projects" class="link-btn">View my work</a>
+                    </div>
+                    <div class="about-image parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title reveal-title">Selected Works</h2>
+                <div class="project-list">
+                    <div class="project-item">
+                        <div class="project-image parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"></div>
+                        <div class="project-meta">
+                            <h3>Brand Evolution</h3>
+                            <span>2023 / Art Direction</span>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-image parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"></div>
+                        <div class="project-meta">
+                            <h3>Digital Space</h3>
+                            <span>2023 / Web Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="contact">
+            <div class="container">
+                <h2 class="reveal-title">Let's build something beautiful together.</h2>
+                <a href="mailto:hello@alexa.design" class="email-link">hello@alexa.design</a>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Alexa Design. All rights reserved.</p>
+                    <div class="socials">
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

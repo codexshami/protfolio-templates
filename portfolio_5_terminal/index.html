@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>root@dev:~# Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+
+    <div class="crt-overlay"></div>
+    
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="btns">
+                <span class="btn close"></span>
+                <span class="btn min"></span>
+                <span class="btn max"></span>
+            </div>
+            <div class="title">root@dev: ~/portfolio</div>
+        </div>
+        
+        <div class="terminal-body" id="terminal-output">
+            <!-- Output will be generated via JS -->
+            <div class="boot-sequence">
+                <p>INIT MATRIX PROTOCOL...</p>
+                <p>LOADING MODULES [██████████] 100%</p>
+                <p>ACCESS GRANTED.</p>
+                <br>
+                <p>Type <span class="cmd-highlight">help</span> to view available commands.</p>
+            </div>
+            
+            <div class="cmd-line">
+                <span class="prompt">root@dev:~#</span>
+                <input type="text" id="cmd-input" autocomplete="off" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

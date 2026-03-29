@@ -1,0 +1,80 @@
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #00ff00;
+    --highlight: #ffffff;
+    --terminal-bg: rgba(0, 5, 0, 0.85);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Fira Code', monospace; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#matrix-bg {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -2;
+}
+
+.crt-overlay {
+    position: fixed; inset: 0; z-index: 1000; pointer-events: none;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+}
+
+.terminal-container {
+    width: 80%; max-width: 900px; height: 80vh;
+    background: var(--terminal-bg); border: 1px solid #333;
+    border-radius: 10px; overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.1);
+    display: flex; flex-direction: column;
+    backdrop-filter: blur(5px);
+}
+
+.terminal-header {
+    background: #1a1a1a; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #333;
+}
+
+.btns { display: flex; gap: 8px; }
+.btn { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.btn.close { background: #ff5f56; }
+.btn.min { background: #ffbd2e; }
+.btn.max { background: #27c93f; }
+
+.title { flex: 1; text-align: center; color: #888; font-size: 0.9rem; }
+
+.terminal-body {
+    padding: 20px; flex: 1; overflow-y: auto; font-size: 1.1rem; line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+.terminal-body::-webkit-scrollbar { width: 8px; }
+.terminal-body::-webkit-scrollbar-track { background: transparent; }
+.terminal-body::-webkit-scrollbar-thumb { background: rgba(0, 255, 0, 0.2); border-radius: 4px; }
+.terminal-body::-webkit-scrollbar-thumb:hover { background: rgba(0, 255, 0, 0.5); }
+
+.boot-sequence { margin-bottom: 20px; }
+.cmd-highlight { color: var(--highlight); font-weight: bold; }
+
+.cmd-line { display: flex; align-items: center; margin-top: 10px; }
+.prompt { margin-right: 15px; color: var(--text-color); }
+#cmd-input {
+    flex: 1; background: transparent; border: none; color: var(--text-color);
+    font-size: 1.1rem; outline: none; caret-color: transparent;
+}
+
+/* Output styling */
+.output-response { margin: 10px 0 20px 0; color: #ccc; }
+.output-response a { color: var(--text-color); text-decoration: underline; }
+
+@media (max-width: 768px) {
+    .terminal-container { width: 95%; height: 90vh; }
+    .terminal-body { font-size: 1rem; }
+    #cmd-input { font-size: 1rem; }
+}

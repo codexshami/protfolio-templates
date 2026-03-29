@@ -1,0 +1,149 @@
+:root {
+    --cyber-yellow: #fcee0a;
+    --cyber-black: #050505;
+    --cyber-blue: #00f0ff;
+    --cyber-red: #ff003c;
+    --cyber-dark-grey: #111;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--cyber-black);
+    color: var(--cyber-yellow);
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, .logo, .cyber-btn {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* ThreeJS Canvas */
+#grid-canvas {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -2; pointer-events: none;
+}
+
+/* Scanlines overlay */
+.scanlines {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 6px 100%;
+    z-index: -1; pointer-events: none;
+}
+
+/* Header */
+.cyber-header {
+    position: fixed; top: 0; width: 100%; padding: 20px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(5,5,5,0.8); border-bottom: 2px solid var(--cyber-yellow);
+    z-index: 100; backdrop-filter: blur(5px);
+}
+.logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; text-shadow: 2px 2px 0 var(--cyber-blue); }
+.cyber-nav { display: flex; gap: 20px; }
+.cyber-nav a {
+    color: var(--cyber-yellow); text-decoration: none; font-weight: 700;
+    transition: 0.2s; font-size: 1.1rem;
+}
+.cyber-nav a:hover { color: var(--cyber-blue); text-shadow: 0 0 5px var(--cyber-blue); }
+
+/* Cyber Box Component */
+.cyber-box {
+    background: var(--cyber-dark-grey);
+    border: 1px solid var(--cyber-yellow);
+    position: relative;
+    padding: 30px;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+.cyber-box::before {
+    content: ''; position: absolute; bottom: 0; right: 0;
+    width: 20px; height: 2px; background: var(--cyber-blue);
+}
+
+/* outline box utility */
+.cyber-box::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    border: 1px solid rgba(252, 238, 10, 0.1); pointer-events: none;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+
+/* Buttons */
+.cyber-btn {
+    background: var(--cyber-yellow); color: var(--cyber-black);
+    border: none; padding: 15px 30px; font-size: 1.2rem; font-weight: 700;
+    cursor: pointer; position: relative; display: inline-block;
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+    text-transform: uppercase; transition: 0.1s;
+}
+.cyber-btn:hover {
+    background: var(--cyber-blue); color: var(--cyber-black);
+}
+
+/* Glitch Text Effect */
+.glitch { position: relative; color: white; }
+.glitch::before, .glitch::after {
+  content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+}
+.glitch::before { left: 3px; text-shadow: -2px 0 var(--cyber-red); clip: rect(24px, 550px, 90px, 0); animation: glitch-anim-2 3s infinite linear alternate-reverse; }
+.glitch::after { left: -3px; text-shadow: -2px 0 var(--cyber-blue); clip: rect(85px, 550px, 140px, 0); animation: glitch-anim 2.5s infinite linear alternate-reverse; }
+
+@keyframes glitch-anim { 0% { clip: rect(10px, 9999px, 86px, 0); } 100% { clip: rect(52px, 9999px, 15px, 0); } }
+@keyframes glitch-anim-2 { 0% { clip: rect(65px, 9999px, 100px, 0); } 100% { clip: rect(13px, 9999px, 80px, 0); } }
+
+/* Common Section Styles */
+.cyber-section {
+    min-height: 100vh; padding: 120px 40px 60px;
+    display: flex; flex-direction: column; justify-content: center;
+    max-width: 1200px; margin: 0 auto;
+}
+.section-header { font-size: 3rem; margin-bottom: 40px; text-shadow: 3px 3px 0 var(--cyber-red); color: white;}
+
+/* Hero */
+.hero-box { max-width: 800px; padding: 60px; }
+.sys-msg { color: var(--cyber-blue); font-size: 1.2rem; margin-bottom: 20px; font-weight: bold; }
+.hero h1 { font-size: 6rem; line-height: 1; margin-bottom: 15px; color: #fff; text-shadow: 4px 4px 0 var(--cyber-red); }
+.cyber-role { font-size: 2rem; color: var(--cyber-yellow); margin-bottom: 40px; letter-spacing: 5px; }
+
+/* Stats */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.stat-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--cyber-blue); }
+.progress-bar { width: 100%; height: 10px; background: #000; border: 1px solid var(--cyber-yellow); margin-bottom: 10px; }
+.progress-bar .fill { height: 100%; background: var(--cyber-yellow); box-shadow: 0 0 10px var(--cyber-yellow); }
+
+/* Missions */
+.missions-list { display: flex; flex-direction: column; gap: 50px; }
+.mission-card { padding: 0; overflow: hidden; display: flex; align-items: stretch; border: none; background: #0a0a0a; }
+.mission-img { width: 400px; position: relative; }
+.mission-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.5); transition: 0.3s; }
+.mission-img .overlay { position: absolute; inset: 0; background: rgba(252, 238, 10, 0.2); mix-blend-mode: multiply; }
+.mission-card:hover img { filter: grayscale(0%) saturate(2); }
+.mission-info { padding: 40px; flex: 1; border: 1px solid var(--cyber-yellow); border-left: none; }
+.mission-info h3 { font-size: 2rem; margin-bottom: 15px; color: var(--cyber-blue);}
+.mission-info p { font-size: 1.2rem; margin-bottom: 30px; color: #ccc; }
+.cyber-link { color: var(--cyber-yellow); font-size: 1.2rem; font-weight: bold; text-decoration: none; padding: 10px 20px; border: 1px solid var(--cyber-yellow); display: inline-block; transition: 0.2s;}
+.cyber-link:hover { background: var(--cyber-yellow); color: #000; }
+
+/* Contact Form */
+.cyber-form { max-width: 600px; }
+.form-group { margin-bottom: 25px; }
+.form-group label { display: block; font-size: 1.1rem; margin-bottom: 10px; color: var(--cyber-blue); font-weight: bold; }
+.form-group input, .form-group textarea {
+    width: 100%; background: #000; border: 1px solid var(--cyber-yellow);
+    padding: 15px; color: var(--cyber-yellow); font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--cyber-blue); box-shadow: 0 0 10px rgba(0,240,255,0.3);
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 3.5rem; }
+    .cyber-nav { display: none; }
+    .hero-box { padding: 30px; }
+    .section-header { font-size: 2rem; }
+    .mission-card { flex-direction: column; }
+    .mission-img { width: 100%; height: 250px; }
+    .mission-info { border-left: 1px solid var(--cyber-yellow); border-top: none; }
+}

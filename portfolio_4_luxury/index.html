@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleonore | Luxury Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="gold-line top"></div>
+    <div class="gold-line bottom"></div>
+    <div class="gold-line left"></div>
+    <div class="gold-line right"></div>
+
+    <nav class="luxury-nav">
+        <div class="logo">E.</div>
+        <ul class="nav-links">
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#atelier">Atelier</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero min-vh-100 flex-center">
+            <div class="hero-content text-center">
+                <h2 class="subtitle fade-up">ATELIER & DESIGN</h2>
+                <h1 class="title fade-up">Eleonore</h1>
+                <p class="description fade-up">Crafting digital experiences of uncompromising luxury and elegance for the world's most exclusive braands.</p>
+                <div class="btn-wrapper fade-up">
+                    <a href="#collection" class="gold-btn">Explore Collection</a>
+                </div>
+            </div>
+            <div class="scroll-down">DISCOVER <br> ↓</div>
+        </section>
+
+        <section id="collection" class="collection min-vh-100 section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Curated Collection</h2>
+                <div class="collection-grid">
+                    <div class="collection-card" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.5">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1549439602-43ebca2327af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                        <div class="card-content">
+                            <h3>01 / Haute Couture</h3>
+                            <p>Brand Identity & Web Presence</p>
+                        </div>
+                    </div>
+                    <div class="collection-card" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.5">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1627993439972-c3fdd983c27e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                        <div class="card-content">
+                            <h3>02 / La Maison</h3>
+                            <p>E-commerce Architecture</p>
+                        </div>
+                    </div>
+                    <div class="collection-card" data-tilt data-tilt-max="5" data-tilt-glare data-tilt-max-glare="0.5">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1622434641406-a158123450f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                        <div class="card-content">
+                            <h3>03 / Horology</h3>
+                            <p>Immersive Exhibition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="atelier" class="atelier min-vh-100 section-padding flex-center">
+            <div class="container atelier-flex">
+                <div class="atelier-text">
+                    <h2 class="section-title">The Atelier</h2>
+                    <p class="lux-text">We believe that true luxury lies in the details. Every pixel, every transition, and every interaction is meticulously crafted to evoke emotion and prestige.</p>
+                    <div class="expertise-list">
+                        <div class="expertise-item">
+                            <h4>Digital Art Direction</h4>
+                            <span>01</span>
+                        </div>
+                        <div class="expertise-item">
+                            <h4>Bespoke Web Development</h4>
+                            <span>02</span>
+                        </div>
+                        <div class="expertise-item">
+                            <h4>Immersive 3D Experiences</h4>
+                            <span>03</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="atelier-image" data-tilt data-tilt-max="2" data-tilt-scale="1.05">
+                    <div class="image-inner" style="background-image: url('https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="gold-frame"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact min-vh-100 section-padding flex-center text-center">
+            <div class="container">
+                <h2 class="section-title">Inquire</h2>
+                <p class="lux-text mx-auto">We accept a select number of commissions each year. Please provide details of your upcoming project.</p>
+                <form class="lux-form mx-auto">
+                    <input type="text" placeholder="Name" class="lux-input">
+                    <input type="email" placeholder="Email Address" class="lux-input">
+                    <textarea placeholder="Project Details" rows="4" class="lux-input"></textarea>
+                    <button type="submit" class="gold-btn btn-submit">Submit Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center padding-y">
+        <p>&#169; 2024 ELEONORE. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

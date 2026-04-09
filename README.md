@@ -1,8 +1,17 @@
+<div align="center">
+
+
 #  Premium 3D Portfolio Templates
+
+</div>
 
 A curated collection of modern, high-quality, responsive 3D portfolio website templates designed for developers, designers, and creative professionals. Built with performance and premium aesthetics in mind.
 
+<div align="center">
+
 ##  Features
+
+</div>
 
 - **Modern Tech Stack**: Pure HTML5, CSS3, and Vanilla JavaScript. No heavy frameworks required.
 - **Immersive 3D Elements**: Powered by Three.js and CSS 3D transforms.
@@ -11,7 +20,13 @@ A curated collection of modern, high-quality, responsive 3D portfolio website te
 - **Fully Responsive**: Flawless experience across all device sizes.
 - **Clean Structure**: Easy to customize and deploy instantly.
 
+  
+<div align="center">
+
+
 ##  The Templates
+
+</div>
 
 ### 1. Futuristic Dark Theme (Neon & Glassmorphism)
 A tech-heavy, neon-glowing aesthetic complete with a Three.js interactive particle background, frosted glass cards, and smooth scroll animations. Perfect for frontend and creative developers.
@@ -51,7 +66,11 @@ A classic hacker/DevOps terminal with interactive command inputs and an immersiv
 ![Terminal Preview](img/sysrdmin.png)
 - **Directory**: `/portfolio_5_terminal`
 
+<div align="center">
+
 ##  Folder Structure
+
+</div>
 
 Each template follows a clean, modular structure:
 
@@ -62,14 +81,22 @@ portfolio_X/
 │── script.js     # Three.js, GSAP, and interaction logic
 ```
 
+<div align="center">
+
 ##  Tech Stack Included
+
+</div>
 
 - **HTML5 / CSS3 / Vanilla JS**
 - **Three.js** (3D rendering and particles)
 - **GSAP & ScrollTrigger** (timeline and scroll animations)
 - **Vanilla-Tilt.js** (3D hover effects)
 
+<div align="center">
+
 ##  Installation & Usage
+
+</div>
 
 1. **Clone the repository**:
    ```bash

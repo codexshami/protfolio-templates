@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Arpita Singh — B.Tech CSE Student & Software Enthusiast specializing in full-stack development.">
+    <title>Arpita Singh | Full-Stack Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Background Orbs -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AS<span class="logo-dot">.</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+                    <span class="theme-icon sun-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+                    <span class="theme-icon moon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text reveal">
+                <p class="hero-greeting">Hello, I am</p>
+                <h1 class="hero-name">Arpita <span class="gradient-text">Singh</span></h1>
+                <p class="hero-title">B.Tech CSE Student &amp; Software Enthusiast</p>
+                <p class="hero-subtitle">Designing scalable systems &bull; Building quality software</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                    <a href="#about" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-card-wrapper reveal">
+                <div class="hero-card" data-tilt data-tilt-max="12" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3" data-tilt-perspective="1000">
+                    <div class="card-glow"></div>
+                    <div class="card-avatar">
+                        <span>AS</span>
+                    </div>
+                    <h2 class="card-name">Arpita Singh</h2>
+                    <p class="card-role">Full-Stack Developer</p>
+                    <div class="card-divider"></div>
+                    <div class="card-info">
+                        <div class="card-info-row">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>arpitasantosh9343@gmail.com</span>
+                        </div>
+                        <div class="card-info-row">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            <span>+91 8604207601</span>
+                        </div>
+                        <div class="card-info-row">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Moradabad, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Career Objective</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-card glass-card reveal" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+                <div class="about-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                <p class="about-text">
+                    Passionate about designing scalable and efficient software systems. Looking to contribute my experience in architecture, development, and team collaboration to build high-quality solutions that drive business success.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-card glass-card reveal" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+                <div class="edu-badge">2023 — 2027</div>
+                <h3 class="edu-degree">B.Tech, Computer Science &amp; Engineering</h3>
+                <p class="edu-university">Teerthanker Mahaveer University</p>
+                <div class="edu-tags">
+                    <span class="edu-tag">CSE</span>
+                    <span class="edu-tag">Full-Time</span>
+                    <span class="edu-tag">Undergraduate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Technical Arsenal</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-pill glass-card reveal" data-tilt data-tilt-max="20" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.25" data-tilt-scale="1.05">
+                    <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E34F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg></span>
+                    <span class="skill-name">HTML</span>
+                </div>
+                <div class="skill-pill glass-card reveal" data-tilt data-tilt-max="20" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.25" data-tilt-scale="1.05">
+                    <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1572B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8"/><path d="M8 8h4"/><path d="M8 16h6"/></svg></span>
+                    <span class="skill-name">CSS</span>
+                </div>
+                <div class="skill-pill glass-card reveal" data-tilt data-tilt-max="20" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.25" data-tilt-scale="1.05">
+                    <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#F7DF1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8"/><path d="M8 16c0-2 4-2 4 0"/></svg></span>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-pill glass-card reveal" data-tilt data-tilt-max="20" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.25" data-tilt-scale="1.05">
+                    <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="1.5" width="28" height="28"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="2" fill="#61DAFB"/></svg></span>
+                    <span class="skill-name">React</span>
+                </div>
+                <div class="skill-pill glass-card reveal" data-tilt data-tilt-max="20" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.25" data-tilt-scale="1.05">
+                    <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D83B01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="2" y1="15" x2="22" y2="15"/></svg></span>
+                    <span class="skill-name">MS-Office</span>
+                </div>
+                <div class="skill-pill glass-card reveal" data-tilt data-tilt-max="20" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.25" data-tilt-scale="1.05">
+                    <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
+                    <span class="skill-name">English Proficiency</span>
+                </div>
+                <div class="skill-pill glass-card reveal" data-tilt data-tilt-max="20" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.25" data-tilt-scale="1.05">
+                    <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#FF5722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/></svg></span>
+                    <span class="skill-name">Digital Marketing</span>
+                </div>
+                <div class="skill-pill glass-card reveal" data-tilt data-tilt-max="20" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.25" data-tilt-scale="1.05">
+                    <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#7C4DFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+                    <span class="skill-name">Frontend Dev</span>
+                </div>
+                <div class="skill-pill glass-card reveal" data-tilt data-tilt-max="20" data-tilt-speed="300" data-tilt-glare data-tilt-max-glare="0.25" data-tilt-scale="1.05">
+                    <span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#00BCD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M20 14.66V20a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h5.34"/><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/></svg></span>
+                    <span class="skill-name">Data Entry</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line" aria-hidden="true"></div>
+
+                <!-- Cert 1: Programming in C -->
+                <div class="timeline-item reveal" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-date">Mar 2025 — Apr 2025</div>
+                        <h3 class="timeline-title">Programming in C</h3>
+                        <p class="timeline-org">Infosys Springboard &bull; Virtual</p>
+                        <div class="timeline-details">
+                            <p>In-depth study of C programming fundamentals:</p>
+                            <ul>
+                                <li>Introduction to C Programming</li>
+                                <li>Data Types and Variables</li>
+                                <li>Input and Output Operations</li>
+                                <li>Operators and Expressions</li>
+                                <li>Control Structures: if, if-else, switch, loops</li>
+                                <li>Arrays, Strings &amp; Character Arrays</li>
+                                <li>Structures and Unions</li>
+                                <li>Pointers &amp; Functions</li>
+                                <li>File Handling in C</li>
+                            </ul>
+                        </div>
+                        <button class="timeline-toggle" aria-label="Toggle details">
+                            <span>View Details</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Microsoft Office 2016 -->
+                <div class="timeline-item reveal" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-date">Feb 2025 — Mar 2025</div>
+                        <h3 class="timeline-title">Microsoft Office 2016</h3>
+                        <p class="timeline-org">Infosys Springboard &bull; Virtual</p>
+                        <div class="timeline-details">
+                            <p>Practical experience with Microsoft Office 2016:</p>
+                            <ul>
+                                <li>Microsoft Word, Excel, PowerPoint, and Outlook</li>
+                                <li>Typing &amp; formatting documents (Word)</li>
+                                <li>Creating charts and formulas (Excel)</li>
+                                <li>Slides with transitions &amp; animations (PowerPoint)</li>
+                                <li>Digital &amp; office skills improvement</li>
+                                <li>Self-paced learning with certificate</li>
+                            </ul>
+                        </div>
+                        <button class="timeline-toggle" aria-label="Toggle details">
+                            <span>View Details</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cert 3: Python Foundation -->
+                <div class="timeline-item reveal" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-date">Aug 2024 — Sep 2024</div>
+                        <h3 class="timeline-title">Python Foundation Program</h3>
+                        <p class="timeline-org">Infosys Springboard &bull; Virtual</p>
+                        <div class="timeline-details">
+                            <p>Core programming concepts &amp; problem-solving techniques:</p>
+                            <ul>
+                                <li>Introduction to Programming &amp; Algorithms</li>
+                                <li>Variables, Data Types &amp; Operators</li>
+                                <li>Control Structures — if/else, for &amp; while loops</li>
+                                <li>Collections: Lists, Tuples, Sets, Dictionaries</li>
+                                <li>Strings &amp; String Manipulation</li>
+                                <li>Functions — creation, parameters, returns</li>
+                                <li>Libraries &amp; Built-in Functions</li>
+                                <li>Basic Algorithms &amp; Pseudo-code</li>
+                            </ul>
+                        </div>
+                        <button class="timeline-toggle" aria-label="Toggle details">
+                            <span>View Details</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3 class="contact-heading">Let's Work Together</h3>
+                    <p class="contact-description">I'm currently looking for new opportunities and collaborations. My inbox is always open!</p>
+
+                    <div class="contact-details">
+                        <div class="contact-row glass-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:arpitasantosh9343@gmail.com" class="contact-value">arpitasantosh9343@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-row glass-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+918604207601" class="contact-value">+91 8604207601</a>
+                            </div>
+                        </div>
+                        <div class="contact-row glass-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Moradabad, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form glass-card reveal" id="contactForm" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+                    <h3 class="form-title">Send a Message</h3>
+                    <div class="form-group">
+                        <label for="form-name">Name</label>
+                        <input type="text" id="form-name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-email">Email</label>
+                        <input type="email" id="form-email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-message">Message</label>
+                        <textarea id="form-message" rows="5" placeholder="Hello Arpita…" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-copy">Designed &amp; Built by <span class="gradient-text">Arpita Singh</span> &copy; 2026</p>
+            <div class="footer-links">
+                <a href="mailto:arpitasantosh9343@gmail.com">Email</a>
+                <a href="tel:+918604207601">Phone</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
